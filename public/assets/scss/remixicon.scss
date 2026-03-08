@@ -1,0 +1,27 @@
+/*
+* Remix Icon v4.9.1
+* https://remixicon.com
+* https://github.com/Remix-Design/RemixIcon
+* 
+* Local version with relative path to fonts in public folder
+*/
+@font-face {
+  font-family: "remixicon";
+  src: url('../fonts/remixicon/remixicon.eot?t=1769685282643'); /* IE9*/
+  src: url('../fonts/remixicon/remixicon.eot?t=1769685282643#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url("../fonts/remixicon/remixicon.woff2?t=1769685282643") format("woff2"),
+  url("../fonts/remixicon/remixicon.woff?t=1769685282643") format("woff"),
+  url('../fonts/remixicon/remixicon.ttf?t=1769685282643') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/remixicon/remixicon.svg?t=1769685282643#remixicon') format('svg'); /* iOS 4.1- */
+  font-display: swap;
+}
+
+[class^="ri-"], [class*=" ri-"] {
+  font-family: 'remixicon' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ri-lg { font-size: 1.3333em; line-height: 0.75em; vertical-align: -.0667em; }
+.ri-xl { font-size: 1.5em; line-height: 0.6666em; vertical-align: -.075em; }

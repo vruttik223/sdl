@@ -1,0 +1,66 @@
+// Variables
+$text-dark: var(--content-color);
+$text-muted: var(--text-muted);
+$success-green: var(--success-color);
+$border-color: var(--border-color);
+
+.order-summary-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid $border-color;
+
+  .summary-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: $text-dark;
+    margin: 0 0 16px;
+  }
+
+  .summary-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .label {
+      font-size: 14px;
+      color: $text-muted;
+    }
+
+    .value {
+      font-size: 14px;
+      font-weight: 500;
+      color: $text-dark;
+    }
+
+    &.discount {
+      .value {
+        color: $success-green;
+        font-weight: 600;
+      }
+    }
+
+    &.total {
+      padding-top: 12px;
+      margin-top: 8px;
+      border-top: 1px dashed $border-color;
+
+      .label {
+        font-weight: 600;
+        color: $text-dark;
+        font-size: 15px;
+      }
+
+      .value {
+        font-size: 16px;
+        font-weight: 700;
+        color: $text-dark;
+      }
+    }
+  }
+}

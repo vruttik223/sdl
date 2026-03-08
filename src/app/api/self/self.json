@@ -1,0 +1,120 @@
+{
+  "id": 19,
+  "name": "Shreyas Munot",
+  "email": "shreyas.munot@example.com",
+  "country_code": "91",
+  "phone": 9082272677,
+  "profile_image_id": "1466",
+  "system_reserve": "0",
+  "status": 1,
+  "created_by_id": 1,
+  "email_verified_at": null,
+  "created_at": "2023-09-29T05:50:05.000000Z",
+  "updated_at": "2023-09-29T06:38:24.000000Z",
+  "deleted_at": null,
+  "orders_count": 8,
+  "role": {
+    "id": 2,
+    "name": "consumer",
+    "guard_name": "web",
+    "system_reserve": "1",
+    "created_at": "2023-08-24T08:16:03.000000Z",
+    "updated_at": "2023-08-24T08:16:03.000000Z",
+    "pivot": {
+      "model_id": "19",
+      "role_id": "2",
+      "model_type": "App\\Models\\User"
+    }
+  },
+  "store": null,
+  "point": {
+    "id": 3,
+    "consumer_id": 19,
+    "balance": 300
+  },
+  "wallet": {
+    "id": 1,
+    "consumer_id": 19,
+    "balance": 84.4
+  },
+  "address": [
+    {
+      "id": 1,
+      "title": "Apna Ghar",
+      "user_id": "19",
+      "street": "Flat 302, Shree Ganesh Society, Andheri East",
+      "city": "Mumbai",
+      "pincode": "400069",
+      "is_default": 0,
+      "country_code": "91",
+      "phone": 9082272677,
+      "country_id": 356,
+      "state_id": 22,
+      "country": {
+        "id": 356,
+        "name": "India"
+      },
+      "state": {
+        "id": 22,
+        "name": "Maharashtra",
+        "country_id": "356",
+        "created_at": "2023-08-24T08:16:43.000000Z",
+        "updated_at": "2023-08-24T08:16:43.000000Z"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Work",
+      "user_id": "19",
+      "street": "B-12, Sea View Apartments, Bandra West",
+      "city": "Mumbai",
+      "pincode": "400050",
+      "is_default": 0,
+      "country_code": "91",
+      "phone": 9082272677,
+      "country_id": 356,
+      "state_id": 22,
+      "country": {
+        "id": 356,
+        "name": "India"
+      },
+      "state": {
+        "id": 22,
+        "name": "Maharashtra",
+        "country_id": "356",
+        "created_at": "2023-08-24T08:16:43.000000Z",
+        "updated_at": "2023-08-24T08:16:43.000000Z"
+      }
+    }
+  ],
+  "vendor_wallet": null,
+  "profile_image": {
+    "id": 1466,
+    "collection_name": "attachment",
+    "name": "Group 427320142",
+    "file_name": "Group-427320142.png",
+    "mime_type": "image/png",
+    "disk": "public",
+    "conversions_disk": "public",
+    "size": "8067",
+    "created_by_id": "1",
+    "created_at": "2023-09-30T09:27:07.000000Z",
+    "updated_at": "2023-09-30T09:27:07.000000Z",
+    "original_url": "https://react.pixelstrap.net/fastkart/assets/avatar.png"
+  },
+  "payment_account": {
+    "id": 1,
+    "user_id": "19",
+    "paypal_email": null,
+    "bank_name": null,
+    "bank_holder_name": null,
+    "bank_account_no": null,
+    "swift": null,
+    "ifsc": null,
+    "is_default": "0",
+    "status": 1,
+    "created_at": "2023-09-30T12:55:44.000000Z",
+    "updated_at": "2023-09-30T12:55:44.000000Z",
+    "deleted_at": null
+  }
+}

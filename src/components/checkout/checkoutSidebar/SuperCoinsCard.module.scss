@@ -1,0 +1,183 @@
+.supercoinsWrapper {
+  margin-top: 12px;
+}
+
+.supercoinsCard {
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background: var(--light-gray);
+    border-color: var(--theme-color);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--theme-color-rgb), 0.2);
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.99);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+.supercoinsLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.supercoinsCheckbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  background-color: var(--white);
+  position: relative;
+
+  &:hover {
+    border-color: var(--theme-color);
+  }
+
+  &.checked {
+    background-color: var(--theme-color);
+    border-color: var(--theme-color);
+
+    &:hover {
+      background-color: var(--theme-color-dark);
+      border-color: var(--theme-color-dark);
+    }
+  }
+}
+
+.supercoinsCheckboxIcon {
+  display: none;
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid var(--btn-primary-text);
+  border-bottom: 2px solid var(--btn-primary-text);
+  transform: rotate(-45deg) translateY(-1px);
+
+  .checked & {
+    display: block;
+  }
+}
+
+.supercoinsTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.supercoinsTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.supercoinsTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--title-color);
+}
+
+.supercoinsSubtitle {
+  font-size: 12px;
+  color: var(--content-color);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.supercoinsSavingInfo {
+  font-size: 12px;
+  color: var(--content-color);
+}
+
+.supercoinsSavingAmount {
+  font-weight: 600;
+  color: var(--success-color);
+  margin-left: 4px;
+}
+
+.supercoinsRight {
+  text-align: right;
+}
+
+.supercoinsRightLabel {
+  font-size: 12px;
+  color: var(--content-color);
+  margin-bottom: 2px;
+}
+
+.supercoinsRightAmount {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--success-color);
+}
+
+.supercoinsInfoIcon {
+  cursor: help;
+  color: var(--content-color);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--theme-color);
+  }
+
+  &:active {
+    color: var(--theme-color-dark);
+  }
+}
+
+// Tooltip custom styles
+// :global(.supercoins-custom-tooltip) {
+//   :global(.tooltip-inner) {
+//     text-align: left;
+//     max-width: 300px;
+//   }
+// }
+
+.tooltipContent {
+  font-size: 12px;
+  padding: 4px 0;
+  text-align: left;
+}
+
+.tooltipTitle {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.tooltipText {
+  margin-bottom: 8px;
+}
+
+.tooltipDivider {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 8px 0;
+  width: 100%;
+}
+
+.tooltipRate {
+  font-size: 12px;
+}

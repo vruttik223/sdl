@@ -1,0 +1,122 @@
+// hero Carousel Styles
+// =====================================================
+@use '../utils/variables';
+@use '../utils/mixin/common';
+@use '../utils/mixin/breakpoints';
+
+// CSS Variables for hero Carousel
+:root {
+  --carousel-min-height: 25vh;
+  --carousel-overlay-gradient: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  --carousel-arrow-size: 48px;
+  --carousel-arrow-bg: rgba(255, 255, 255, 0.95);
+  --carousel-arrow-hover-bg: var(--theme-color);
+  --carousel-dot-size: 12px;
+  --carousel-dot-active-width: 36px;
+  --carousel-transition-speed: 0.6s;
+}
+
+.hero-carousel-section {
+  margin: 20px auto 0px;
+  
+  .slick-dots {
+    position: relative;
+    bottom: 0;
+    margin-top: calc(5px + (20 - 5) * ((100vw - 320px) / (1920 - 320)));
+
+    li {
+      @include common.pseudowh($width: auto, $height: auto);
+
+      button {
+        @include common.pseudowh(
+          $width: calc(6px + (8 - 6) * ((100vw - 320px) / (1920 - 320))),
+          $height: calc(6px + (8 - 6) * ((100vw - 320px) / (1920 - 320)))
+        );
+        border-radius: 4px;
+        padding: 0;
+        margin: 0;
+        background-color: rgba(35, 35, 35, 0.2);
+        transition: all 0.5s ease;
+
+        &::before {
+          display: none;
+        }
+
+        html.dark & {
+          background-color: rgba(119, 119, 119, 0.439);
+        }
+      }
+
+      &.slick-active {
+        button {
+          margin: 0;
+          width: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
+          background-color: var(--theme-color);
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+
+  .slick-list {
+    margin: 0;
+  }
+
+  .slick-prev,
+      .slick-next {
+        @include common.pseudowh(
+          $width: calc(30px + (36 - 30) * ((100vw - 320px) / (1920 - 320))),
+          $height: calc(30px + (36 - 30) * ((100vw - 320px) / (1920 - 320)))
+        );
+        background-color: var(--white);
+        box-shadow: 0px 2px 6px rgba(variables.$title-color, 0.15);
+        border-radius: 50%;
+        z-index: 2;
+        transition: all 0.3s ease-in-out;
+
+        &::before {
+          @include common.remixicon;
+          color: var(--theme-color);
+          font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+        }
+
+        &:hover {
+          background-color: var(--theme-color);
+          box-shadow: 0px 3px 8px rgba(variables.$title-color, 0.25);
+
+          &::before {
+            color: var(--white);
+          }
+        }
+      }
+
+      .slick-prev {
+        left: 1rem;
+
+        &::before {
+          content: '\ea64';
+        }
+
+        body[dir='rtl'] & {
+          left: unset;
+          right: 1rem;
+        }
+      }
+
+      .slick-next {
+        right: 1rem;
+
+        &::before {
+          content: '\ea6e';
+        }
+
+        body[dir='rtl'] & {
+          right: unset;
+          left: 1rem;
+        }
+      }
+}

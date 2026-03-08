@@ -1,0 +1,171 @@
+// Health Concerns Section Styles
+
+.health-concerns-section {
+  overflow: hidden;
+  
+  .health-concerns-grid-wrapper {
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .health-concerns-grid {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-block: 4px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    
+    // Custom scrollbar
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--light-gray);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--theme-color);
+      border-radius: 10px;
+    }
+
+    // Desktop: 8 cards
+    @media (min-width: 1200px) {
+      .health-concern-card {
+        min-width: calc((100% - (7 * 16px)) / 8);
+        max-width: calc((100% - (7 * 16px)) / 8);
+      }
+    }
+
+    // Below lg: 6 cards
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .health-concern-card {
+        min-width: calc((100% - (5 * 16px)) / 6);
+        max-width: calc((100% - (5 * 16px)) / 6);
+      }
+    }
+
+    // Below md: 4 cards
+    @media (max-width: 767px) {
+      gap: 12px;
+      
+      .health-concern-card {
+        min-width: calc((100% - (3 * 12px)) / 4);
+        max-width: calc((100% - (3 * 12px)) / 4);
+      }
+    }
+
+    // Mobile small
+    @media (max-width: 575px) {
+      .health-concern-card {
+        min-width: calc((100% - (2 * 12px)) / 3);
+        max-width: calc((100% - (2 * 12px)) / 3);
+      }
+    }
+  }
+
+  .health-concern-card {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &:hover {
+      transform: translateY(-4px);
+
+      .health-concern-image-wrapper {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+
+      .health-concern-image {
+        transform: scale(1.05);
+      }
+
+      .health-concern-name {
+        color: var(--theme-color);
+      }
+    }
+
+    .health-concern-image-wrapper {
+      position: relative;
+      aspect-ratio: 1;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      background: var(--white);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .health-concern-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .health-concern-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--title-color);
+      margin: 0;
+      text-align: center;
+      line-height: 1.3;
+      transition: color 0.3s ease;
+
+      @media (min-width: 768px) {
+        font-size: 14px;
+      }
+
+      @media (min-width: 1200px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 11px;
+      }
+    }
+  }
+
+  // Loading state
+  .health-concerns-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid var(--light-gray);
+      border-top-color: var(--theme-color);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+  }
+
+  // Empty state
+  .health-concerns-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--content-color);
+    
+    p {
+      margin: 0;
+      font-size: 15px;
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

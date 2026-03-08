@@ -1,0 +1,504 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Aaloo kachalu beta kaha gye the, Aaloo kachalu beta kaha gye the, ",
+      "category": "Fruits"
+    },
+    {
+      "id": 2,
+      "name": "Banana",
+      "category": "Fruits"
+    },
+    {
+      "id": 3,
+      "name": "Orange",
+      "category": "Fruits"
+    },
+    {
+      "id": 4,
+      "name": "Mango",
+      "category": "Fruits"
+    },
+    {
+      "id": 5,
+      "name": "Grapes",
+      "category": "Fruits"
+    },
+    {
+      "id": 6,
+      "name": "Pineapple",
+      "category": "Fruits"
+    },
+    {
+      "id": 7,
+      "name": "Strawberry",
+      "category": "Fruits"
+    },
+    {
+      "id": 8,
+      "name": "Watermelon",
+      "category": "Fruits"
+    },
+    {
+      "id": 9,
+      "name": "Papaya",
+      "category": "Fruits"
+    },
+    {
+      "id": 10,
+      "name": "Kiwi",
+      "category": "Fruits"
+    },
+    {
+      "id": 11,
+      "name": "Potato",
+      "category": "Vegetables"
+    },
+    {
+      "id": 12,
+      "name": "Tomato",
+      "category": "Vegetables"
+    },
+    {
+      "id": 13,
+      "name": "Onion",
+      "category": "Vegetables"
+    },
+    {
+      "id": 14,
+      "name": "Carrot",
+      "category": "Vegetables"
+    },
+    {
+      "id": 15,
+      "name": "Cabbage",
+      "category": "Vegetables"
+    },
+    {
+      "id": 16,
+      "name": "Cauliflower",
+      "category": "Vegetables"
+    },
+    {
+      "id": 17,
+      "name": "Spinach",
+      "category": "Vegetables"
+    },
+    {
+      "id": 18,
+      "name": "Broccoli",
+      "category": "Vegetables"
+    },
+    {
+      "id": 19,
+      "name": "Capsicum",
+      "category": "Vegetables"
+    },
+    {
+      "id": 20,
+      "name": "Beetroot",
+      "category": "Vegetables"
+    },
+    {
+      "id": 21,
+      "name": "Milk",
+      "category": "Dairy"
+    },
+    {
+      "id": 22,
+      "name": "Curd",
+      "category": "Dairy"
+    },
+    {
+      "id": 23,
+      "name": "Butter",
+      "category": "Dairy"
+    },
+    {
+      "id": 24,
+      "name": "Cheese",
+      "category": "Dairy"
+    },
+    {
+      "id": 25,
+      "name": "Paneer",
+      "category": "Dairy"
+    },
+    {
+      "id": 26,
+      "name": "Bread",
+      "category": "Bakery"
+    },
+    {
+      "id": 27,
+      "name": "Brown Bread",
+      "category": "Bakery"
+    },
+    {
+      "id": 28,
+      "name": "Buns",
+      "category": "Bakery"
+    },
+    {
+      "id": 29,
+      "name": "Croissant",
+      "category": "Bakery"
+    },
+    {
+      "id": 30,
+      "name": "Donut",
+      "category": "Bakery"
+    },
+    {
+      "id": 31,
+      "name": "Rice",
+      "category": "Grains"
+    },
+    {
+      "id": 32,
+      "name": "Wheat Flour",
+      "category": "Grains"
+    },
+    {
+      "id": 33,
+      "name": "Basmati Rice",
+      "category": "Grains"
+    },
+    {
+      "id": 34,
+      "name": "Oats",
+      "category": "Grains"
+    },
+    {
+      "id": 35,
+      "name": "Corn Flour",
+      "category": "Grains"
+    },
+    {
+      "id": 36,
+      "name": "Sugar",
+      "category": "Essentials"
+    },
+    {
+      "id": 37,
+      "name": "Salt",
+      "category": "Essentials"
+    },
+    {
+      "id": 38,
+      "name": "Tea Powder",
+      "category": "Essentials"
+    },
+    {
+      "id": 39,
+      "name": "Coffee Powder",
+      "category": "Essentials"
+    },
+    {
+      "id": 40,
+      "name": "Cooking Oil",
+      "category": "Essentials"
+    },
+    {
+      "id": 41,
+      "name": "Chicken",
+      "category": "Meat"
+    },
+    {
+      "id": 42,
+      "name": "Mutton",
+      "category": "Meat"
+    },
+    {
+      "id": 43,
+      "name": "Fish",
+      "category": "Meat"
+    },
+    {
+      "id": 44,
+      "name": "Prawns",
+      "category": "Meat"
+    },
+    {
+      "id": 45,
+      "name": "Eggs",
+      "category": "Meat"
+    },
+    {
+      "id": 46,
+      "name": "Almonds",
+      "category": "Dry Fruits"
+    },
+    {
+      "id": 47,
+      "name": "Cashews",
+      "category": "Dry Fruits"
+    },
+    {
+      "id": 48,
+      "name": "Raisins",
+      "category": "Dry Fruits"
+    },
+    {
+      "id": 49,
+      "name": "Walnuts",
+      "category": "Dry Fruits"
+    },
+    {
+      "id": 50,
+      "name": "Pistachios",
+      "category": "Dry Fruits"
+    },
+    {
+      "id": 51,
+      "name": "Shampoo",
+      "category": "Personal Care"
+    },
+    {
+      "id": 52,
+      "name": "Soap",
+      "category": "Personal Care"
+    },
+    {
+      "id": 53,
+      "name": "Toothpaste",
+      "category": "Personal Care"
+    },
+    {
+      "id": 54,
+      "name": "Face Wash",
+      "category": "Personal Care"
+    },
+    {
+      "id": 55,
+      "name": "Body Lotion",
+      "category": "Personal Care"
+    },
+    {
+      "id": 56,
+      "name": "Detergent",
+      "category": "Household"
+    },
+    {
+      "id": 57,
+      "name": "Dishwash Liquid",
+      "category": "Household"
+    },
+    {
+      "id": 58,
+      "name": "Floor Cleaner",
+      "category": "Household"
+    },
+    {
+      "id": 59,
+      "name": "Toilet Cleaner",
+      "category": "Household"
+    },
+    {
+      "id": 60,
+      "name": "Garbage Bags",
+      "category": "Household"
+    },
+    {
+      "id": 61,
+      "name": "Chips",
+      "category": "Snacks"
+    },
+    {
+      "id": 62,
+      "name": "Biscuits",
+      "category": "Snacks"
+    },
+    {
+      "id": 63,
+      "name": "Cookies",
+      "category": "Snacks"
+    },
+    {
+      "id": 64,
+      "name": "Namkeen",
+      "category": "Snacks"
+    },
+    {
+      "id": 65,
+      "name": "Popcorn",
+      "category": "Snacks"
+    },
+    {
+      "id": 66,
+      "name": "Cold Drink",
+      "category": "Beverages"
+    },
+    {
+      "id": 67,
+      "name": "Fruit Juice",
+      "category": "Beverages"
+    },
+    {
+      "id": 68,
+      "name": "Energy Drink",
+      "category": "Beverages"
+    },
+    {
+      "id": 69,
+      "name": "Mineral Water",
+      "category": "Beverages"
+    },
+    {
+      "id": 70,
+      "name": "Milkshake",
+      "category": "Beverages"
+    },
+    {
+      "id": 71,
+      "name": "Notebook",
+      "category": "Stationery"
+    },
+    {
+      "id": 72,
+      "name": "Pen",
+      "category": "Stationery"
+    },
+    {
+      "id": 73,
+      "name": "Pencil",
+      "category": "Stationery"
+    },
+    {
+      "id": 74,
+      "name": "Eraser",
+      "category": "Stationery"
+    },
+    {
+      "id": 75,
+      "name": "Marker",
+      "category": "Stationery"
+    },
+    {
+      "id": 76,
+      "name": "Mobile Charger",
+      "category": "Electronics"
+    },
+    {
+      "id": 77,
+      "name": "Earphones",
+      "category": "Electronics"
+    },
+    {
+      "id": 78,
+      "name": "Bluetooth Speaker",
+      "category": "Electronics"
+    },
+    {
+      "id": 79,
+      "name": "Power Bank",
+      "category": "Electronics"
+    },
+    {
+      "id": 80,
+      "name": "USB Cable",
+      "category": "Electronics"
+    },
+    {
+      "id": 81,
+      "name": "T-shirt",
+      "category": "Clothing"
+    },
+    {
+      "id": 82,
+      "name": "Jeans",
+      "category": "Clothing"
+    },
+    {
+      "id": 83,
+      "name": "Shirt",
+      "category": "Clothing"
+    },
+    {
+      "id": 84,
+      "name": "Jacket",
+      "category": "Clothing"
+    },
+    {
+      "id": 85,
+      "name": "Sweater",
+      "category": "Clothing"
+    },
+    {
+      "id": 86,
+      "name": "Sofa",
+      "category": "Furniture"
+    },
+    {
+      "id": 87,
+      "name": "Chair",
+      "category": "Furniture"
+    },
+    {
+      "id": 88,
+      "name": "Table",
+      "category": "Furniture"
+    },
+    {
+      "id": 89,
+      "name": "Bed",
+      "category": "Furniture"
+    },
+    {
+      "id": 90,
+      "name": "Cupboard",
+      "category": "Furniture"
+    },
+    {
+      "id": 91,
+      "name": "Pressure Cooker",
+      "category": "Kitchen"
+    },
+    {
+      "id": 92,
+      "name": "Frying Pan",
+      "category": "Kitchen"
+    },
+    {
+      "id": 93,
+      "name": "Mixer Grinder",
+      "category": "Kitchen"
+    },
+    {
+      "id": 94,
+      "name": "Gas Stove",
+      "category": "Kitchen"
+    },
+    {
+      "id": 95,
+      "name": "Water Bottle",
+      "category": "Kitchen"
+    },
+    {
+      "id": 96,
+      "name": "Yoga Mat",
+      "category": "Fitness"
+    },
+    {
+      "id": 97,
+      "name": "Dumbbells",
+      "category": "Fitness"
+    },
+    {
+      "id": 98,
+      "name": "Skipping Rope",
+      "category": "Fitness"
+    },
+    {
+      "id": 99,
+      "name": "Treadmill",
+      "category": "Fitness"
+    },
+    {
+      "id": 100,
+      "name": "Exercise Bike",
+      "category": "Fitness"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+// app.scss
+@use 'sass:math';
+@use 'sass:color';
+
+// Lenis smooth scroll
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+// // Then CSS imports
+// @import './slick.min.css';
+// @import './slick-theme.min.css';
+@import 'react-toastify/dist/ReactToastify.css';
+// @import './remixicon.scss';
+
+@import 'utils/fonts';
+@import 'utils/variables';
+@import 'themes/theme-variables'; // Theme system - Customer & Doctor themes
+@import 'themes/colors/index'; // Modular component colors (buttons, forms, etc.)
+@import 'style.scss';
+
+// .dark {
+//   @import 'dark.scss';
+// }
