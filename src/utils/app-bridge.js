@@ -133,6 +133,19 @@ const handleAppMessage = (data) => {
       }
       break;
       
+    case 'AUTH_LOGOUT':
+      if (typeof document !== 'undefined') {
+        try {
+          sessionStorage.removeItem('appAuthToken');
+        } catch {
+          // ignore
+        }
+      }
+      if (messageHandlers.onAuthLogout) {
+        messageHandlers.onAuthLogout();
+      }
+      break;
+      
     case 'USER_UPDATE':
       if (messageHandlers.onUserUpdate) {
         messageHandlers.onUserUpdate(payload.user);
@@ -219,6 +232,13 @@ export const notifyWishlistUpdated = (productId, isWishlisted) => {
  */
 export const requestAuth = () => {
   sendToApp('AUTH_REQUIRED', {});
+};
+
+/**
+ * Notify app-side logout so website can clear app token
+ */
+export const notifyAppLogout = () => {
+  sendToApp('AUTH_LOGOUT', {});
 };
 
 /**

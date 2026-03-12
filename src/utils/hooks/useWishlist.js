@@ -6,6 +6,7 @@ import {
   toggleWishlist,
 } from '@/api/wishlist.api';
 import { useState, useEffect } from 'react';
+import { getAppAuthToken, notifyWishlistUpdated, requestAuth } from '@/utils/app-bridge';
 
 /**
  * Hook to fetch wishlist data
@@ -24,7 +25,9 @@ export const useWishlist = (
   useEffect(() => {
     // Check if user is authenticated
     if (typeof window !== 'undefined') {
-      const token = sessionStorage.getItem('userToken');
+      // Prefer token coming from React Native app (WebView bridge)
+      const appToken = getAppAuthToken();
+      const token = appToken || sessionStorage.getItem('userToken');
       setIsAuthenticated(!!token);
     }
   }, []);
@@ -108,16 +111,34 @@ export const useToggleWishlist = (options = {}) => {
 
   return useMutation({
     mutationKey: ['toggleWishlist'],
-    mutationFn: ({ productUid }) => 
-      toggleWishlist({ productUid }),
+    mutationFn: async ({ productUid }) => {
+      return toggleWishlist({ productUid });
+    },
     onSuccess: (data, variables) => {
       // Invalidate and refetch wishlist
       queryClient.invalidateQueries({ queryKey: ['wishlist'] });
+
+      // Notify React Native app about wishlist change (if we know product)
+      if (variables?.productUid) {
+        try {
+          // data.isWishlisted: backend could return final state; if not, assume toggle
+          const isWishlisted = data?.data?.isWishlisted ?? true;
+          notifyWishlistUpdated(variables.productUid, isWishlisted);
+        } catch (e) {
+          // Non-fatal: just log
+          // eslint-disable-next-line no-console
+          console.error('Failed to notify app about wishlist update:', e);
+        }
+      }
       
       // Call user's onSuccess if provided
       options.onSuccess?.(data, variables);
     },
     onError: (error) => {
+      if (error?.message === 'AUTH_REQUIRED') {
+        // Auth flow will be handled by the host app; don't spam console
+        return;
+      }
       console.error('Error toggling wishlist:', error);
       options.onError?.(error);
     },

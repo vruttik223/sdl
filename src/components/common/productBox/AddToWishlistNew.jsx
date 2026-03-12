@@ -6,6 +6,8 @@ import { useWishlist, useToggleWishlist } from '@/utils/hooks/useWishlist';
 import { ToastNotification } from '@/utils/customFunctions/ToastNotification';
 import ConfirmationModal from '../ConfirmationModal';
 import OtpLoginModal from '@/components/auth/login/OtpLoginModal';
+import { isAppMode } from '@/utils/webview-detector';
+import { getAppAuthToken, requestAuth } from '@/utils/app-bridge';
 
 const AddToWishlistNew = ({ productObj, isActive = false, onRemoveClick }) => {
   const { data: wishlistData } = useWishlist({ page: 1, limit: 1000 });
@@ -39,8 +41,19 @@ const AddToWishlistNew = ({ productObj, isActive = false, onRemoveClick }) => {
 
     // Check if user is authenticated
     if (typeof window !== 'undefined') {
-      const token = sessionStorage.getItem('userToken');
+      const appToken = getAppAuthToken();
+      const token = appToken || sessionStorage.getItem('userToken');
+
       if (!token) {
+        // If running inside the React Native app WebView, ask the app to handle login
+        if (isAppMode()) {
+          console.log('[Wishlist] No token in app mode → requesting auth from app');
+          requestAuth();
+          return;
+        }
+
+        // Normal website: open OTP login modal
+        console.log('[Wishlist] No token in browser → opening OTP login modal');
         setLoginModalOpen(true);
         return;
       }

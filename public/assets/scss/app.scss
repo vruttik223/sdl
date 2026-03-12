@@ -13,10 +13,10 @@ html.lenis body {
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 // // Then CSS imports
-// @import './slick.min.css';
-// @import './slick-theme.min.css';
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
 @import 'react-toastify/dist/ReactToastify.css';
-// @import './remixicon.scss';
+@import 'remixicon/fonts/remixicon.css';
 
 @import 'utils/fonts';
 @import 'utils/variables';

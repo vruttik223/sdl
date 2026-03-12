@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import ThemeOptionContext from '@/helper/themeOptionsContext';
 import CookiesComponent from './cookies';
 import MainFooter from './footer';
@@ -15,12 +15,18 @@ import { isAppMode } from '@/utils/webview-detector';
 
 const SubLayout = ({ children }) => {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const isNewsLetter = Cookies.get('newsLetterModal');
   const { themeOption } = useContext(ThemeOptionContext);
-  // IMPORTANT: decide app-mode synchronously to avoid header/footer flicker
-  // - pathname startsWith('/app') handles our WebView routes reliably
-  // - isAppMode() is a fallback for query param / WebView detection
-  const isApp = (pathname && pathname.startsWith('/app')) || isAppMode();
+  // IMPORTANT: decide app-mode synchronously where possible
+  // - `app=true` query param is our primary signal for WebView usage
+  // - pathname.startsWith('/app') is a secondary, optional convention
+  // - isAppMode() is a runtime fallback (React Native WebView detection)
+  const hasAppParam = searchParams?.get('app') === 'true';
+  const isApp =
+    hasAppParam ||
+    (pathname && pathname.startsWith('/app')) ||
+    isAppMode();
   
   // Hide mobile menu on collection, shop and product detail pages
   const isCollectionPage =

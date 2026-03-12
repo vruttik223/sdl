@@ -32,6 +32,10 @@ const CollectionContain = () => {
       'field',
       'layout',
     ]);
+  // Determine the desired collection layout:
+  // 1. Use explicit ?layout= query param if provided
+  // 2. Otherwise fall back to themeOption.collection.collection_layout
+  // 3. If that is missing/invalid, use a safe default so the page always renders
   const collectionLayout = layout?.layout
     ? layout?.layout
     : themeOption?.collection?.collection_layout;
@@ -84,6 +88,14 @@ const CollectionContain = () => {
       <CollectionLeftSidebar filter={filter} setFilter={setFilter} />
     ),
   };
+
+  // Ensure we always have a valid key so something renders
+  const validLayouts = Object.keys(isCollectionMatch);
+  const defaultLayout = 'collection_left_sidebar';
+  const safeLayout = validLayouts.includes(collectionLayout)
+    ? collectionLayout
+    : defaultLayout;
+
   if (isLoading) return <Loader />;
   return (
     <>
@@ -91,7 +103,8 @@ const CollectionContain = () => {
         title={'Products'}
         subNavigation={[{ name: 'products' }]}
       /> */}
-      {isCollectionMatch[collectionLayout]}
+      {isCollectionMatch[safeLayout]}
+      
     </>
   );
 };
